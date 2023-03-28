@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Pong Game</title>
+	<style>
+		canvas {
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+    <p>my friend sent a whole html document in chat (he knows nothing about web dev and probably dosent even know what html even is, he just called it code lmao) so i decided to host it</p>
+	<canvas id="gameCanvas" width="800" height="600"></canvas>
+	
+	<script>
+		// Define variables
+		var canvas = document.getElementById("gameCanvas");
+		var ctx = canvas.getContext("2d");
+		var ballRadius = 10;
+		var x = canvas.width/2;
+		var y = canvas.height-30;
+		var dx = 2;
+		var dy = -2;
+		var paddleHeight = 10;
+		var paddleWidth = 75;
+		var paddleX = (canvas.width-paddleWidth)/2;
+		var rightPressed = false;
+		var leftPressed = false;
+
+		// Add event listeners for keyboard input
+		document.addEventListener("keydown", keyDownHandler, false);
+		document.addEventListener("keyup", keyUpHandler, false);
+
+		// Functions to handle keyboard input
+		function keyDownHandler(e) {
+			if(e.keyCode == 39) {
+				rightPressed = true;
+			}
+			else if(e.keyCode == 37) {
+				leftPressed = true;
+			}
+		}
+
+		function keyUpHandler(e) {
+			if(e.keyCode == 39) {
+				rightPressed = false;
+			}
+			else if(e.keyCode == 37) {
+				leftPressed = false;
+			}
+		}
+
+		// Function to draw the ball
+		function drawBall() {
+			ctx.beginPath();
+			ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+			ctx.fillStyle = "#ffffff";
+			ctx.fill();
+			ctx.closePath();
+		}
+
+		// Function to draw the paddle
+		function drawPaddle() {
+			ctx.beginPath();
+			ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+			ctx.fillStyle = "#ffffff";
+			ctx.fill();
+			ctx.closePath();
+		}
+
+		// Function to update the position of the ball and paddle
+		function update() {
+			if(rightPressed && paddleX < canvas.width-paddleWidth) {
+				paddleX += 7;
+			}
+			else if(leftPressed && paddleX > 0) {
+				paddleX -= 7;
+			}
+
+			// Reverse direction of ball if it hits the top or bottom of canvas
+			if(y + dy < ballRadius) {
+				dy = -dy;
+			}
+			else if(y + dy > canvas.height-ballRadius) {
+				if(x > paddleX && x < paddleX + paddleWidth) {
+					dy = -dy;
+				}
+				else {
+					alert("GAME OVER");
+					document.location.reload();
+				}
+			}
+
+			// Reverse direction of ball if it hits the left or right of canvas
+			if(x + dx < ballRadius || x + dx > canvas.width-ballRadius) {
+				dx = -dx;
+			}
+
+			x += dx;
+			y += dy;
+		}
+
+		// Function to draw the game on the canvas
+		function draw() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			drawBall();
+			drawPaddle();
+			update();
+			requestAnimationFrame(draw);
+		}
+
+		draw();
+	</script>
+</body>
+</html>
