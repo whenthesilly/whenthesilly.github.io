@@ -40,6 +40,11 @@ li {
     text-indent: -0.5em;
     padding-left: 0.5em;
 }
+
+#nocentre {
+    text-align: left
+}
+
 /* the following code is stolen from maia and probably written by charlotte */
 
 .radi8-webring-container {
