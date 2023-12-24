@@ -28,7 +28,8 @@ footer {
 }
 
 a {
-    color: white;
+    color: whitesmoke;
+    font-weight: bold;
 }
 
 ul {
