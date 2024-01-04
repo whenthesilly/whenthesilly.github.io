@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
 
+.buttons {
+    text-decoration: none;
+}
+
 body {
     background-color: blueviolet;
     font-family: 'Sono', sans-serif;
@@ -42,9 +46,11 @@ li {
     padding-left: 0.5em;
 }
 
-#nocentre {
+.nocentre {
     text-align: left
 }
+
+
 
 /* the following code is stolen from maia and probably written by charlotte */
 
