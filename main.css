@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+.buttons {
+    text-decoration: none;
+}
+
+body {
+    background-color: blueviolet;
+    font-family: 'Sono', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: rgb(121, 68, 170);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+a {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+}
+
+summary {
+    text-decoration: underline;
+    
+}
+
+details {
+    padding: 25px;
+}
+.nocentre {
+    text-align: left
+}
+
+abbr[title] {
+    cursor: help;
+  }
+
+
