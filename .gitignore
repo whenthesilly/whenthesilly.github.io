@@ -133,7 +133,7 @@ dist
 
 # eleventy stuff
 _site/
-
+www/
 #and heres silly's stuff!! :3
 old
 .vscode
