@@ -54,5 +54,8 @@ details {
     text-align: left
 }
 
+abbr[title] {
+    cursor: help;
+  }
 
 
