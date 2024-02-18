@@ -6,7 +6,7 @@ module.exports = (config) => {
       input: "src",
       includes: "_includes",
       data: "_data",
-      output: "docs",
+      output: "www",
     },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
