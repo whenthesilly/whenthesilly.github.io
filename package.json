@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "the silley site",
   "scripts": {
-	"build": "del docs && cmd /C \"set ELEVENTY_ENV=prod && eleventy\"",
-	"serve": "del docs && cmd /C \"set ELEVENTY_ENV=dev && eleventy --serve\"",
+	"build": "del www && cmd /C \"set ELEVENTY_ENV=prod && eleventy\"",
+	"serve": "del www && cmd /C \"set ELEVENTY_ENV=dev && eleventy --serve\"",
 	"update": "git pull && npm i && npm run build"
 	},
   "repository": {
