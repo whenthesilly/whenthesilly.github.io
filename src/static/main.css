@@ -44,6 +44,7 @@ ul {
 
 summary {
     text-decoration: underline;
+    cursor: pointer
     
 }
 
