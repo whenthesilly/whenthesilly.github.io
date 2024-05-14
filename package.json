@@ -5,6 +5,7 @@
   "scripts": {
     "actions-build": "rm -rf www && ELEVENTY_ENV=prod eleventy",
     "build": "del www && cmd /C \"set ELEVENTY_ENV=prod && eleventy\"",
+    "linux-serve": "rm -rf www && ELEVENTY_ENV=dev eleventy --serve",
     "serve": "del www && cmd /C \"set ELEVENTY_ENV=dev && eleventy --serve\""
   },
   "repository": {
