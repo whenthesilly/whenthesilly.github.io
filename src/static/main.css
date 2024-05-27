@@ -4,6 +4,16 @@
     text-decoration: none;
 }
 
+.buttons-image {
+    transition: all 0.5s;
+}
+
+.buttons-image:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(10px 5px 4px rgba(0, 0, 0, 0.5));
+    transition: all 0.5s;
+}
+
 body {
     background-color: blueviolet;
     font-family: 'Sono', sans-serif;
