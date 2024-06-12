@@ -72,4 +72,6 @@ abbr[title] {
     cursor: help;
   }
 
-
+.shadow {
+    cursor: pointer;
+}
