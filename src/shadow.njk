@@ -1,0 +1,20 @@
+---
+description: The Ultimate Lifeform
+title: Shadow the Hedgehog
+---
+{% extends 'layouts/main.njk' %}
+{% block page %}
+<script>
+    function play() {
+      var audio = document.getElementById("audio");
+      audio.play();
+    }
+  </script>
+<img src="/images/shadow.png" onclick="play()">
+<audio id="audio" src="/iAmAllOfMe.mp3"></audio>
+<noscript><br>all javascript does here is play "i am all of me" when you click shadow. im not evil i promise</noscript>
+<details>
+    <summary>credits</summary>
+    <p>"I Am... All Of Me" performed by Crush 40 and written by Johnny GioeliJun Senoue (SEGA)</p>
+</details>
+{% endblock %}
