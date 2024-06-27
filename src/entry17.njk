@@ -1,0 +1,16 @@
+---
+description: ...
+title: Room 264
+---
+{% extends 'layouts/main.njk' %}
+{% block page %}
+<script>
+    function play() {
+      var audio = document.getElementById("audio");
+      audio.play();
+    }
+  </script>
+<img src="/images/entry17.png" onclick="play()" class="audio-image">
+<audio id="audio" src="/mus_smile.mp3"></audio>
+<noscript><br>all javascript does here is play sounds when you click the image. im not evil i promise</noscript>
+{% endblock %}
