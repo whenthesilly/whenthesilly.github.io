@@ -22,10 +22,12 @@
         margin: 0;
         padding: 0;
         text-align: center;
+        transition: all 0.5s;
     }
     a {
         color: #ff95f8;
         font-weight: bold;
+        transition: all 0.5s;
     }
     footer {
         background-color:rgb(36,24,71);
@@ -33,6 +35,7 @@
         padding: 20px;
         text-align: center;
         margin-top: 40px;
+        transition: all 0.5s;
     }
 }
 
@@ -44,10 +47,12 @@
         margin: 0;
         padding: 0;
         text-align: center;
+        transition: all 0.5s;
     }
     a {
         color: rgb(16,54,101);
         font-weight: bold;
+        transition: all 0.5s;
     }
     footer {
         background-color:rgb(255,125,237);
@@ -55,6 +60,7 @@
         padding: 20px;
         text-align: center;
         margin-top: 40px;
+        transition: all 0.5s;
     }
 }
 
