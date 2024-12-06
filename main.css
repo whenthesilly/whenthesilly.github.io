@@ -14,6 +14,13 @@
     transition: all 0.5s;
 }
 
+.links {
+   transition: all 0.2s;
+}
+.links:hover{
+   transform: scale(1.1);
+   transition: all 0.2s;
+}
 @media (prefers-color-scheme: dark) {
     body {
         background-color: rgb(9,0,35);
@@ -21,7 +28,6 @@
         color: rgb(255,77,237);
         margin: 0;
         padding: 0;
-        text-align: center;
         transition: all 0.5s;
     }
     a {
@@ -32,10 +38,10 @@
     footer {
         background-color:rgb(36,24,71);
         color: rgb(255,77,237);
-        padding: 20px;
-        text-align: center;
+        padding: 10px;
         margin-top: 40px;
         transition: all 0.5s;
+        text-align: center;
     }
 }
 
@@ -46,7 +52,6 @@
         color: rgb(43,43,43);
         margin: 0;
         padding: 0;
-        text-align: center;
         transition: all 0.5s;
     }
     a {
@@ -61,6 +66,7 @@
         text-align: center;
         margin-top: 40px;
         transition: all 0.5s;
+        text-align: center;
     }
 }
 
@@ -82,7 +88,9 @@ ul {
     text-align: center;
     padding: 0px;
 }
-
+li{
+    line-height: 25px;
+}
 summary {
     text-decoration: underline;
     cursor: pointer
@@ -102,4 +110,38 @@ abbr[title] {
 
 .audio-image {
     cursor: pointer;
+}
+
+
+.left{
+    background-color: rgba(171, 170, 170, 0.237);
+    border: 1px solid rgba(255, 255, 255, 0.534);
+    border-radius: 10px;
+    vertical-align: top;
+    padding: 15px;
+    margin: 5px;
+
+}
+
+@media screen and (min-width:1200px){
+    .left {
+        position: absolute;
+        display: inline-block;
+    }
+}
+@media screen and (max-width:1200px){
+    .left{
+        text-align: center;
+    }
+}
+.right {
+    text-align: center;
+    place-content: center;
+    display:inline-block;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.medy{
+    cursor: grab;
 }
