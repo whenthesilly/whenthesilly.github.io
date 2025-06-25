@@ -23,9 +23,9 @@
 }
 
 body {
-    background-image: url("./bg.png");
-    background-attachment: fixed;
-    background-size: 48px;
+    background:
+    fixed linear-gradient(rgba(0, 0, 0, 0.3), transparent),
+    fixed 0 / 48px url("./bg.png");
     image-rendering: pixelated;
     font-family: 'Sono', sans-serif;
     margin: 0;
@@ -142,16 +142,19 @@ abbr[title] {
     vertical-align: top;
     padding: 15px;
     margin: 5px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto
 
 }
 
-@media screen and (min-width:1200px){
+@media screen and (min-width:1600px){
     .left {
         position: absolute;
         display: inline-block;
     }
 }
-@media screen and (max-width:1200px){
+@media screen and (max-width:1600px){
     .left{
         text-align: center;
     }
