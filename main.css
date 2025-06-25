@@ -21,16 +21,48 @@
    transform: scale(1.1);
    transition: all 0.2s;
 }
+
+body {
+    background-image: url("./bg.png");
+    background-attachment: fixed;
+    background-size: 48px;
+    image-rendering: pixelated;
+    font-family: 'Sono', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    /*position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;*/
+    margin-top: auto;
+    transition: all 0.5s;
+    text-align: center;
+    box-shadow: inset 0 -1px 10px black;
+    padding: 10px;
+}
 @media (prefers-color-scheme: dark) {
-    body {
+    .right {
         background-color: rgb(9,0,35);
-        font-family: 'Sono', sans-serif;
         color: rgb(255,77,237);
-        margin: 0;
-        padding: 0;
-        transition: all 0.5s;
+
     }
-    a {
+
+    body {
+        color: rgb(255,77,237);
+    }
+    a.read{
+        color: rgb(16,54,101);
+        font-weight: bold;
+        transition: all 0.5s
+    }
+    a{
         color: #ff95f8;
         font-weight: bold;
         transition: all 0.5s;
@@ -38,21 +70,16 @@
     footer {
         background-color:rgb(36,24,71);
         color: rgb(255,77,237);
-        padding: 10px;
-        margin-top: 40px;
-        transition: all 0.5s;
-        text-align: center;
     }
 }
 
 @media (prefers-color-scheme: light) {
+   .right{
+       background-color:rgb(252,181,242);
+}
+
     body {
-        background-color:rgb(252,181,242);
-        font-family: 'Sono', sans-serif;
         color: rgb(43,43,43);
-        margin: 0;
-        padding: 0;
-        transition: all 0.5s;
     }
     a {
         color: rgb(16,54,101);
@@ -62,11 +89,6 @@
     footer {
         background-color:rgb(255,125,237);
         color: rgb(43,43,43);
-        padding: 20px;
-        text-align: center;
-        margin-top: 40px;
-        transition: all 0.5s;
-        text-align: center;
     }
 }
 
@@ -114,7 +136,7 @@ abbr[title] {
 
 
 .left{
-    background-color: rgba(171, 170, 170, 0.237);
+    background-color: rgba(171, 170, 170, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.534);
     border-radius: 10px;
     vertical-align: top;
@@ -135,13 +157,19 @@ abbr[title] {
     }
 }
 .right {
+    margin-top: 10px;
+    margin-bottom: 30px;
     text-align: center;
     place-content: center;
     display:inline-block;
-    vertical-align: top;
+    vertical-align: center;
     padding: 10px;
+    max-width: 1000px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 20px rgba(255,77,237, 0.8));
 }
 
 .medy{
     cursor: grab;
 }
+
