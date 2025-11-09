@@ -144,21 +144,20 @@ abbr[title] {
     margin: 5px;
     max-width: 1000px;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    text-align: center
 
 }
 
 @media screen and (min-width:1600px){
     .left {
-        position: absolute;
-        display: inline-block;
+        /*TODO: make medycat and link list aligned*/
     }
 }
-@media screen and (max-width:1600px){
+/*@media screen and (max-width:1600px){
     .left{
-        text-align: center;
     }
-}
+}*/
 .right {
     margin-top: 10px;
     margin-bottom: 30px;
