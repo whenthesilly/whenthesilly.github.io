@@ -134,7 +134,8 @@ dist
 # eleventy stuff
 _site/
 www/
-#and heres silly's stuff!! :3
+#and heres mellie's stuff!! :3
 old
 .vscode
 temp.html
+.directory
